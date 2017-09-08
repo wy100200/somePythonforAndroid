@@ -4,17 +4,18 @@
 import tinify
 import os
 import shutil
-# key 可以去网站注册 会得到一个key
+import sys
+# key 可以去网站注册 会得到一个key 免费key 一个月压缩500张
 # 批量压缩png文件的脚本
 tinify.key='v5b0JQQwVO9UReHYk-VGJ1VtJ1wBPgiu'
 
 
-projectPath ="/Users/wuyan/Desktop/android/sdcr/SmallWallet/res"
+print "脚本名：", sys.argv[0]
 
+projectPath =sys.argv[1]
+print projectPath
 
-
-print  os.listdir(projectPath)
-
+print os.listdir(projectPath)
 
 os.chdir(projectPath)#转到工程目录下
 
